@@ -1,4 +1,4 @@
-# 🫖 Craftable
+# 🖌️ Craftable
 
 A new endeavor.
 
