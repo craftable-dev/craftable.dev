@@ -1,8 +1,8 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,md,twig,svg}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
     require('tailwindcss-debug-screens'),
   ],
   theme: {
@@ -12,7 +12,22 @@ module.exports = {
     },
     debugScreens: {
       position: ['bottom', 'right'],
+      style: {
+        borderRadius: '4px',
+        boxShadow: 'none',
+        margin: '16px',
+        padding: '8px',
+      },
     },
-    extend: {},
+    extend: {
+      borderColor: ({ theme }) => ({
+        DEFAULT: theme('colors.gray.700')
+      })
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+    },
   },
 }
