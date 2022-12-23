@@ -1,6 +1,5 @@
 @layer base {
-  html,
-  body {
+  html {
     width: 100%;
     @apply font-sans antialiased bg-[#232663] w-screen h-full flex items-center justify-center overflow-x-hidden;
   }
